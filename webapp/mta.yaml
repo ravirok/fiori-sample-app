@@ -1,0 +1,22 @@
+ID: fiori-sample-app
+_schema-version: "3.1"
+version: 1.0.0
+
+modules:
+  - name: fiori-sample-app
+    type: html5
+    path: .
+    build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - npm run build
+    parameters:
+      memory: 256M
+
+resources:
+  - name: fiori-html5-repo-host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-host
