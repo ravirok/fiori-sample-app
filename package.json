@@ -5,6 +5,6 @@
     "start": "ui5 serve -o index.html"
   },
   "devDependencies": {
-    "@ui5/cli": "^3.0.0"
+    "@ui5/cli": "^4.0.0"
   }
 }
