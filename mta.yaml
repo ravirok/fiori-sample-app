@@ -5,14 +5,15 @@ version: 1.0.0
 modules:
   - name: fiori-sample-app
     type: html5
-    path: app
+    path: .
     build-parameters:
       builder: custom
+      supported-platforms: []
       commands:
         - npm install
         - npm run build
-    parameters:
-      memory: 256M
+    requires:
+      - name: fiori-html5-repo-host
 
 resources:
   - name: fiori-html5-repo-host
