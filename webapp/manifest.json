@@ -1,0 +1,22 @@
+{
+  "sap.app": {
+    "id": "fiori.sample",
+    "type": "application",
+    "title": "Fiori Sample App"
+  },
+  "sap.ui": {
+    "technology": "UI5"
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "fiori.sample.view.App",
+      "type": "XML",
+      "async": true
+    },
+    "dependencies": {
+      "libs": {
+        "sap.m": {}
+      }
+    }
+  }
+}
