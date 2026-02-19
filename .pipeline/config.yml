@@ -1,0 +1,25 @@
+general:
+  buildTool: "npm"
+
+stages:
+  Build:
+    npmExecuteScripts: true
+
+  Test:
+    npmExecuteScripts: true
+
+  Deploy:
+    cloudFoundryDeploy: true
+
+steps:
+  npmExecuteScripts:
+    scripts:
+      - npm install
+      - npm run build || echo "No build script defined"
+
+  cloudFoundryDeploy:
+    cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
+    cfOrg: "YOUR_CF_ORG"
+    cfSpace: "YOUR_CF_SPACE"
+    credentialsId: "cf-credentials"
+    manifest: "manifest.yml"
