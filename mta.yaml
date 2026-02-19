@@ -5,7 +5,7 @@ version: 1.0.0
 modules:
   - name: fiori-sample-app
     type: html5
-    path: .
+    path: app
     build-parameters:
       builder: custom
       commands:
