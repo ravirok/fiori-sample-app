@@ -8,11 +8,3 @@ stages:
   Deploy:
     cloudFoundryDeploy: true
     
-    steps:
-    cloudFoundryDeploy: 
-  applicationName: "fiori-sample-app" 
- cfApiEndpoint:
- "https://api.cf.eu10.hana.ondemand.com"
- cfOrg: "YOUR_ORG" 
- cfSpace: "YOUR_SPACE"
- credentialsId: "cf-credentials"
