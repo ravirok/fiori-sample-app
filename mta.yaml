@@ -11,7 +11,7 @@ modules:
       commands:
         - npm install
         - npx ui5 build --all --clean-dest
-       build-result: dist
+      build-result: dist
 
   - name: fiori-sample-app-content
     type: com.sap.application.content
@@ -20,17 +20,9 @@ modules:
       - name: fiori-html5-repo-host
         parameters:
           content-target: true
-      - name: fiori-html5-repo-runtime # mandatory
-    build-parameters:
-      build-result: dist
-      requires:
-        - name: fiori-sample-app
-          artifacts:
-            - dist/**
-          target-path: resources/
+      - name: fiori-html5-repo-runtime
 
 resources:
-
   - name: fiori-html5-repo-host
     type: org.cloudfoundry.managed-service
     parameters:
