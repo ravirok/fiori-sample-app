@@ -8,7 +8,11 @@ modules:
     type: html5
     path: .
     build-parameters:
-      builder: npm
+      builder: custom
+      commands:
+        - npm install
+        - npx ui5 build --all --clean-dest
+       build-result: dist
       supported-platforms: []
 
   - name: fiori-sample-app-content
