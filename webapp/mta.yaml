@@ -16,11 +16,11 @@ modules:
 
   - name: fiori-sample-app-content
     type: com.sap.application.content
-    path: .
     requires:
       - name: fiori-html5-repo-host
         parameters:
           content-target: true
+      - name: fiori-html5-repo-runtime # mandatory
     build-parameters:
       build-result: dist
       requires:
@@ -42,4 +42,3 @@ resources:
     parameters:
       service: html5-apps-repo
       service-plan: app-runtime
-      
