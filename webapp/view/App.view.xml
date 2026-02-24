@@ -1,17 +1,12 @@
 <mvc:View
-  controllerName="fiori.sample.controller.App"
-  xmlns:mvc="sap.ui.core.mvc"
-  xmlns="sap.m">
-  <App>
-    <pages>
-      <Page title="Fiori Sample Application">
-        <content>
-          <VBox class="sapUiSmallMargin">
-            <Text text="Hello SAP Calm!" />
-            <Button text="Click Me" press=".onPress" />
-          </VBox>
-        </content>
-      </Page>
-    </pages>
-  </App>
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="fiori.sample.controller.App">
+    <App>
+        <Page title="Fiori Sample App">
+            <content>
+                <Text text="Hello, SAP CI/CD Default Pipeline!" />
+            </content>
+        </Page>
+    </App>
 </mvc:View>
