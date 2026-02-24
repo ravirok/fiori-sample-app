@@ -14,6 +14,7 @@ modules:
       build-result: dist
     requires:
       - name: html5-repo-host
+      
         - name: fiori-content
     type: com.sap.application.content
     path: .
