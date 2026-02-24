@@ -13,24 +13,25 @@ modules:
         - npx ui5 build --all --clean-dest
       build-result: dist
 
-  - name: fiori-sample-app-content
+  - name: fiori-content
     type: com.sap.application.content
     path: .
     requires:
-      - name: fiori-html5-repo-host
+      - name: html5-repo-host
         parameters:
           content-target: true
-      - name: fiori-html5-repo-runtime
+    build-parameters:
+      build-result: dist
+      requires:
+        - name: fiori-sample-app
+          artifacts:
+            - dist/**
+          target-path: resources/
 
 resources:
-  - name: fiori-html5-repo-host
+  - name: html5-repo-host
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
       service-plan: app-host
 
-  - name: fiori-html5-repo-runtime
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: html5-apps-repo
-      service-plan: app-runtime
