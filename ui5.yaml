@@ -1,9 +1,9 @@
 specVersion: "3.0"
 metadata:
-  name: fiori.sample
+  name: com.example.fiori
 type: application
-framework:
-  name: SAPUI5
-  version: "1.120.0"
-  libraries:
-    - name: sap.m
+resources:
+  configuration:
+    paths:
+      webapp: webapp
+
