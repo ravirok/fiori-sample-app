@@ -3,21 +3,42 @@ _schema-version: "3.1"
 version: 1.0.0
 
 modules:
+
   - name: fiori-sample-app
     type: html5
     path: .
     build-parameters:
       builder: custom
-      supported-platforms: []
       commands:
         - npm install
         - npm run build
+      supported-platforms: []
+
+  - name: fiori-sample-app-content
+    type: com.sap.application.content
     requires:
       - name: fiori-html5-repo-host
+        parameters:
+          content-target: true
+      - name: fiori-html5-repo-runtime # mandatory
+    build-parameters:
+      build-result: dist
+      requires:
+        - name: fiori-sample-app
+          artifacts:
+            - dist/**
+          target-path: resources/
 
 resources:
+
   - name: fiori-html5-repo-host
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
       service-plan: app-host
+
+  - name: fiori-html5-repo-runtime
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-runtime
