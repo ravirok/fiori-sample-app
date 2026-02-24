@@ -15,6 +15,21 @@ modules:
       build-result: dist
     requires:
       - name: html5-repo-host
+        - name: fiori-content
+    type: com.sap.application.content
+    path: .
+    requires:
+      - name: html5-repo-host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+        - name: fiori-sample-app
+          artifacts:
+            - dist/**
+          target-path: resources/
+
 
 resources:
   - name: html5-repo-host
