@@ -3,6 +3,7 @@ _schema-version: "3.1"
 version: 1.0.0
 
 modules:
+
   - name: fiori-sample-app
     type: html5
     path: .
@@ -10,23 +11,10 @@ modules:
       builder: custom
       commands:
         - npm install
-        - npx ui5 build --all --clean-dest
+        - npm run build
       build-result: dist
-
-  - name: fiori-content
-    type: com.sap.application.content
-    path: .
     requires:
       - name: html5-repo-host
-        parameters:
-          content-target: true
-    build-parameters:
-      build-result: resources
-      requires:
-        - name: fiori-sample-app
-          artifacts:
-            - dist/**
-          target-path: resources/
 
 resources:
   - name: html5-repo-host
