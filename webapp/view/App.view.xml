@@ -7,7 +7,7 @@
       <Page title="Fiori Sample Application">
         <content>
           <VBox class="sapUiSmallMargin">
-            <Text text="Hello SAP Fiori!" />
+            <Text text="Hello SAP Calm!" />
             <Button text="Click Me" press=".onPress" />
           </VBox>
         </content>
