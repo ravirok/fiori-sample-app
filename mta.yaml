@@ -3,16 +3,25 @@ _schema-version: "3.1"
 version: 1.0.0
  
 modules:
+ 
+  # HTML5 app module
   - name: fiori-sample-app
     type: html5
-    path: .
+    path: .                       # points to repo root
     build-parameters:
       builder: custom
       commands:
         - npm install
         - npm run build
+        # Ensure dist folder is at root
+        - mv dist ../dist_temp || true
+        - mkdir -p dist
+        - cp -r ../dist_temp/* dist/ || true
       build-result: dist
+    requires:
+      - name: html5-repo-host
  
+  # Fiori content module for packaging
   - name: fiori-content
     type: com.sap.application.content
     path: .
