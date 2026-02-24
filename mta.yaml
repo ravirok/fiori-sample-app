@@ -21,7 +21,7 @@ modules:
         parameters:
           content-target: true
     build-parameters:
-      build-result: dist
+      build-result: resources
       requires:
         - name: fiori-sample-app
           artifacts:
