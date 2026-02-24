@@ -5,10 +5,10 @@ version: 1.0.0
 modules:
   - name: fiori-sample-app
     type: html5
-    path: .                     # root folder
+    path: .                # root folder
     build-parameters:
-      builder: npm              # default SAP CI/CD pipeline uses npm builder
-      build-result: dist        # output folder
+      builder: npm         # default pipeline uses npm builder
+      build-result: webapp # <- pipeline expects webapp folder content
     requires:
       - name: html5-repo-host
  
