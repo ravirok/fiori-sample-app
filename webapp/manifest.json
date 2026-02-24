@@ -1,19 +1,17 @@
 {
   "sap.app": {
-    "id": "fiori.sample",
+    "id": "com.example.fiori",
     "type": "application",
-    "title": "Fiori Sample App"
-  },
-  "sap.ui": {
-    "technology": "UI5"
+    "i18n": "i18n/i18n.properties"
   },
   "sap.ui5": {
     "rootView": {
-      "viewName": "fiori.sample.view.App",
+      "viewName": "webapp.view.App",
       "type": "XML",
-      "async": true
+      "id": "app"
     },
     "dependencies": {
+      "minUI5Version": "1.71.49",
       "libs": {
         "sap.m": {}
       }
