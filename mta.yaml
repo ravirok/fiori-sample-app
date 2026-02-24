@@ -6,12 +6,9 @@ modules:
 
   - name: fiori-sample-app
     type: html5
-    path: .
+    path: fiori-sample-app
     build-parameters:
-      builder: custom
-      commands:
-        - npm install
-        - npm run build
+      builder: npm
       supported-platforms: []
 
   - name: fiori-sample-app-content
