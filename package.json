@@ -1,13 +1,11 @@
 {
   "name": "fiori-sample-app",
   "version": "1.0.0",
-  "private": true,
-  "description": "SAP Fiori Sample App",
   "scripts": {
-    "start": "ui5 serve -o index.html",
-    "build": "ui5 build --clean-dest --all"
+    "build": "ui5 build --all --clean-dest"
   },
   "devDependencies": {
-    "@ui5/cli": "^3.0.0"
+    "@ui5/cli": "^3"
   }
 }
+
