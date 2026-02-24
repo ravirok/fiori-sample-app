@@ -6,7 +6,7 @@ modules:
 
   - name: fiori-sample-app
     type: html5
-    path: fiori-sample-app
+    path: .
     build-parameters:
       builder: npm
       supported-platforms: []
