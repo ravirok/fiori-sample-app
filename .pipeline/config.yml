@@ -1,5 +1,9 @@
-general:
-  buildTool: "mta"
+  general:
+  webhookTokenCredentialsId: cicd-webhook-secret
+ 
+stages:
+  Build:
+    buildTool: mta
 
 stages:
   Build:
