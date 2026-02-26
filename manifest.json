@@ -1,0 +1,25 @@
+{
+  "applications": [
+    {
+      "name": "fiori-sample-app",
+      "memory": "256M",
+      "disk_quota": "512M",
+      "buildpacks": [
+        "nodejs_buildpack"
+      ],
+      "path": "webapp",
+      "command": "npx serve -s . -l 8080",
+      "env": {
+        "PORT": "8080",
+        "NODE_ENV": "production",
+        "SAP_APP_ID": "fiori-sample-app"
+      },
+      "routes": [
+        {
+          "route": "fiori-sample-app-dev.eu10.hana.ondemand.com"
+        }
+      ]
+    }
+  ]
+}
+ 
