@@ -12,25 +12,25 @@ modules:
         - npm install
         - npm run build
       supported-platforms: []
-      
+ 
   - name: fiori-sample-app-deployer
-  type: com.sap.application.content
-  path: .
-  requires:
-    - name: html5-repo-host
-      parameters:
-        content-target: true
-  build-parameters:
-    build-result: .
+    type: com.sap.application.content
+    path: .
     requires:
-      - name: fiori-sample-app
-        artifacts:
-          - fiori-sample-app.zip
-        target-path: .
+      - name: html5-repo-host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: .
+      requires:
+        - name: fiori-sample-app
+          artifacts:
+            - fiori-sample-app.zip
+          target-path: .
+ 
 resources:
   - name: html5-repo-host
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
       service-plan: app-host
- 
