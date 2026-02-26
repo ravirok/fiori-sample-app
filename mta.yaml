@@ -13,9 +13,8 @@ modules:
         - npm run build
       supported-platforms: []
  
-  - name: fiori-sample-app-deployer
+  - name: fiori-content
     type: com.sap.application.content
-    path: .
     requires:
       - name: html5-repo-host
         parameters:
@@ -25,8 +24,8 @@ modules:
       requires:
         - name: fiori-sample-app
           artifacts:
-            - dist
-          target-path: resources/
+            - dist/**
+          target-path: resources/fiori-sample-app
  
 resources:
   - name: html5-repo-host
