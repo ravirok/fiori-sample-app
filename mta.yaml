@@ -15,6 +15,7 @@ modules:
  
   - name: fiori-content
     type: com.sap.application.content
+    path: .
     requires:
       - name: html5-repo-host
         parameters:
