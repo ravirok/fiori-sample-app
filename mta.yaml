@@ -12,6 +12,7 @@ modules:
         - npm install
         - npm run build
       supported-platforms: []
+      
   - name: fiori-sample-app-deployer
   type: com.sap.application.content
   path: .
