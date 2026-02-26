@@ -1,6 +1,6 @@
-ID: fiori-sample-app
 _schema-version: "3.2"
-version: 1.0.0
+ID: fiori-sample-app
+version: 0.0.1
  
 modules:
   - name: fiori-sample-app
@@ -11,10 +11,19 @@ modules:
       commands:
         - npm install
         - npm run build
-      supported-platforms: []
+      build-result: dist
+ 
+  - name: fiori-sample-app-content
+    type: com.sap.application.content
+    requires:
+      - name: fiori-html5-host
+    build-parameters:
+      content:
+        - source: dist
+          target: resources/fiori-sample-app
  
 resources:
-  - name: html5-repo-host
+  - name: fiori-html5-host
     type: org.cloudfoundry.managed-service
     parameters:
       service: html5-apps-repo
