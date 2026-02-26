@@ -14,20 +14,20 @@ modules:
       supported-platforms: []
  
   - name: fiori-sample-app-deployer
-    type: com.sap.application.content
-    path: .
+  type: com.sap.application.content
+  path: .
+  requires:
+    - name: html5-repo-host
+      parameters:
+        content-target: true
+  build-parameters:
+    build-result: .
     requires:
-      - name: html5-repo-host
-        parameters:
-          content-target: true
-    build-parameters:
-      build-result: resources
-      requires:
-        - name: fiori-sample-app
-          artifacts:
-            - dist
-          target-path: resources/
- 
+      - name: fiori-sample-app
+        artifacts:
+          - fiori-sample-app.zip
+        target-path: .
+        
 resources:
   - name: html5-repo-host
     type: org.cloudfoundry.managed-service
