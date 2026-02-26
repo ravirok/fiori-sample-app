@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "ui5 build --clean-dest --dest dist"
+    "build": "ui5 build --cleanDest --dest dist"
   },
   "devDependencies": {
     "@ui5/cli": "^3"
