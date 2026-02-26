@@ -2,8 +2,7 @@
   "name": "fiori-sample-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "ui5 serve -o index.html",
-    "build": "ui5 build --dest dist"
+    "build": "ui5 build --dest dist && cd dist && zip -r ../fiori-sample-app.zip ."
   },
   "devDependencies": {
     "@ui5/cli": "^3.0.0"
