@@ -1,10 +1,8 @@
 {
-  "name": "fiori-sample-app",
-  "version": "1.0.0",
   "scripts": {
-    "build": "ui5 build --clean-dist"
+    "build": "ui5 build --clean-dest --dest dist"
   },
   "devDependencies": {
-    "@ui5/cli": "^3.0.0"
+    "@ui5/cli": "^3"
   }
 }
