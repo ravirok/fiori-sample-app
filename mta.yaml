@@ -21,12 +21,12 @@ modules:
         parameters:
           content-target: true
     build-parameters:
-      build-result: .
+      build-result: resources
       requires:
         - name: fiori-sample-app
           artifacts:
-            - fiori-sample-app.zip
-          target-path: .
+            - dist
+          target-path: resources/
  
 resources:
   - name: html5-repo-host
