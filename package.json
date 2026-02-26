@@ -1,8 +1,12 @@
 {
+  "name": "ui5-dev-app",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "build": "ui5 build --all --dest dist"
+    "build": "ui5 build --clean-dest",
+    "start": "ui5 serve -o index.html"
   },
   "devDependencies": {
-    "@ui5/cli": "^3"
+    "@ui5/cli": "^3.0.0"
   }
 }
