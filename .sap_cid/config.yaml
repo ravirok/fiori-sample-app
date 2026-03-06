@@ -9,9 +9,7 @@ stages:
       apiEndpoint: "https://api.cf.eu10-004.hana.ondemand.com"
       space: "Dev_Space"
       org: "HCL America Solutions Inc._hcl-integrationsuite-qxeoz78m"
-      credential: "devsubaccount"
-  Approval:
-    manualApproval: "true" 
+      credential: "devsubaccount" 
   release:
     cfDeploy:
       apiEndpoint: "https://api.cf.eu10-004.hana.ondemand.com"
