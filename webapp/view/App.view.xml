@@ -1,7 +1,7 @@
 <mvc:View
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    controllerName="fiori.sample.controller.App">
+    controllerName="fiori.sample.app.controller.App">
     <App>
         <Page title="Fiori Sample App">
             <content>
