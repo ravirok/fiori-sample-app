@@ -2,4 +2,5 @@ applications:
   - name: fiori-sample-app
     memory: 256M
     buildpacks:
-      - nodejs_buildpack
+      - staticfile_buildpack
+    path: webapp
