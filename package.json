@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "npx serve -s webapp -l 8080"
+    "build": "ui5 build --clean-dest",
+    "start": "ui5 serve -o index.html"
   },
   "devDependencies": {
-    "serve": "^14.2.0"
+    "@ui5/cli": "^3.0.0"
   }
 }
