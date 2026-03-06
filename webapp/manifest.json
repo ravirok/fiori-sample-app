@@ -1,6 +1,6 @@
 {
   "sap.app": {
-    "id": "fiori-sample-app",
+    "id": "fiori.sample.app",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
