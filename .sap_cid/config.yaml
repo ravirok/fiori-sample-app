@@ -10,9 +10,9 @@ stages:
       space: "Dev_Space"
       org: "HCL America Solutions Inc._hcl-integrationsuite-qxeoz78m"
       credential: "devsubaccount"
+  Approval:
+    manualApproval: "true" 
   release:
-    manualConfirmation: true
-    confirmMessage: "Approve deployment to Production?"
     cfDeploy:
       apiEndpoint: "https://api.cf.eu10-004.hana.ondemand.com"
       org: "HCL_America Solutions Inc._hclbuild-g03o2ijo"
