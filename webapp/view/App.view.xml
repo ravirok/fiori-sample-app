@@ -5,7 +5,7 @@
     <App>
         <Page title="Fiori Sample App">
             <content>
-                <Text text="Hello, SAP CI/CD Pipeline!" />
+                <Text text="Hello, Welcome to SAP Calm Summit!" />
             </content>
         </Page>
     </App>
