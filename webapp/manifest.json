@@ -20,7 +20,7 @@
   },
   "sap.ui5": {
     "rootView": {
-      "viewName": "fiori-sample-app.view.App",
+      "viewName": "fiori.sample.app.view.App",
       "type": "XML",
       "id": "app"
     },
