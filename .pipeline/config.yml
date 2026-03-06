@@ -1,33 +1,15 @@
- version: '1.0'
+general:
+  productiveBranch: main
  
 stages:
-  - name: Build
-    jobs:
-      - name: build-mta
-        type: Build
-        script:
-          # Install dependencies and build UI5 app
-          - npm install
-          - npm run build
-          # Build MTA archive
-          - mbt build -p=cf -s= --mtar=fiori-sample-app.mtar
+  Build:
+    mtaBuild: true
  
-  - name: Deploy
-    jobs:
-      - name: deploy-html5
-        type: Deploy
-        script:
-          # Deploy the MTA content module to HTML5 repo (app-host)
-          - cf target -o 
-HCL_America Solutions Inc._hclbuild-g03o2ijo -s dev
-          - cf login -a 
-https://api.cf.eu10-004.hana.ondemand.com
- -u $BTP_USER -p $BTP_PASSWORD -s <DEV-Space>
-          - cf deploy mta --mtar fiori-sample-app.mtar --no-start
-        description: Deploys fiori-sample-app to DEV space via MTA
+  Acceptance:
+    cfDeploy: true
  
-approvals:
-  # Optional: add approvals for ACC
-  - name: approve-to-acc
-    type: Manual
-    stage: Deploy-to-ACC
+  Release:
+    manualConfirmation: true
+ 
+  Production:
+    cfDeploy: true
