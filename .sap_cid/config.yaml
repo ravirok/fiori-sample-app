@@ -11,9 +11,9 @@ stages:
       org: "HCL America Solutions Inc._hcl-integrationsuite-qxeox78m"
       credential: "devsubaccount"
  
-  releaseApproval:
-    manualApproval: true
-    
+  Approval_PROD:
+    manualExecution:
+      comment: "Final approval before production deployment"
   release:
     cfDeploy:
       apiEndpoint: "https://api.cf.eu10-004.hana.ondemand.com"
