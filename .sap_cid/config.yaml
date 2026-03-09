@@ -1,19 +1,22 @@
----
 stages:
   build:
     buildTool: "npm"
     buildDescriptor: "package.json"
     buildToolVersion: "N22"
+ 
   acceptance:
     cfDeploy:
       apiEndpoint: "https://api.cf.eu10-004.hana.ondemand.com"
       space: "Dev_Space"
-      org: "HCL America Solutions Inc._hcl-integrationsuite-qxeoz78m"
-      credential: "devsubaccount" 
+      org: "HCL America Solutions Inc._hcl-integrationsuite-qxeox78m"
+      credential: "devsubaccount"
+ 
   release:
-    manualConfirmation: true  
+    approval:
+      steps:
+        - name: "Approve Production Deployment"
     cfDeploy:
       apiEndpoint: "https://api.cf.eu10-004.hana.ondemand.com"
-      org: "HCL_America Solutions Inc._hclbuild-g03o2ijo"
+      org: "HCL America Solutions Inc._hclbuild-g03o2ijo"
       space: "dev"
       credential: "devsubaccount"
