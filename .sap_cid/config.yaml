@@ -11,10 +11,20 @@ stages:
       org: "HCL America Solutions Inc._hcl-integrationsuite-qxeox78m"
       credential: "devsubaccount"
  
+  compliance:
+    executeScript: |
+      echo "====================================="
+      echo "Manual approval required"
+      echo "Approve deployment to Production"
+      echo "====================================="
+      read -p "Type YES to continue: " approval
+ 
+      if [ "$approval" != "YES" ]; then
+        echo "Deployment rejected"
+        exit 1
+      fi
+ 
   release:
-    approval:
-      steps:
-        - name: "Approve Production Deployment"
     cfDeploy:
       apiEndpoint: "https://api.cf.eu10-004.hana.ondemand.com"
       org: "HCL America Solutions Inc._hclbuild-g03o2ijo"
