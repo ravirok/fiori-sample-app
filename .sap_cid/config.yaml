@@ -12,18 +12,10 @@ stages:
       credential: "devsubaccount"
  
   compliance:
-    executeScript: |
-      echo "====================================="
-      echo "Manual approval required"
-      echo "Approve deployment to Production"
-      echo "====================================="
-      read -p "Type YES to continue: " approval
- 
-      if [ "$approval" != "YES" ]; then
-        echo "Deployment rejected"
-        exit 1
-      fi
- 
+    compliance:
+    manualConfirmation: true
+    confirmationMessage: "Approve deployment to Production?"
+    
   release:
     cfDeploy:
       apiEndpoint: "https://api.cf.eu10-004.hana.ondemand.com"
