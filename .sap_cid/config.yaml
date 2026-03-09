@@ -11,10 +11,8 @@ stages:
       org: "HCL America Solutions Inc._hcl-integrationsuite-qxeox78m"
       credential: "devsubaccount"
  
-  compliance:
-    compliance:
-    manualConfirmation: true
-    confirmationMessage: "Approve deployment to Production?"
+  releaseApproval:
+    manualApproval: true
     
   release:
     cfDeploy:
